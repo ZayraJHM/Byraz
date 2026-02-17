@@ -1,0 +1,126 @@
+/* frontend/src/App.css */
+:root {
+  --byraz-green: #2e7d32; /* El verde de tu imagen */
+  --bg-gray: #d9d9d9;
+  background-color: #ffffff;
+}
+
+.main-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Estilo Byraz */
+.header-byraz {
+  background-color: var(--byraz-green);
+  color: white;
+  padding: 10px 40px;
+  margin-bottom: 20px;
+}
+
+.header-byraz h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Introducción */
+.content-container { padding: 0 40px; }
+.formula-intro { color: #000000; font-size: 0.9rem; margin-bottom: 30px; }
+.formula-title { font-weight: bold; color: #000000; }
+
+/* Grid de dos columnas */
+.main-grid {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.input-section { flex: 1; }
+.results-section {
+  flex: 1.2;
+  background-color: var(--bg-gray);
+  padding: 40px;
+  border-radius: 8px;
+  min-height: 300px;
+  color: #000000;
+}
+
+/* Eliminar flechas en Chrome, Safari, Edge y Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Estilos de Inputs */
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-weight: bold; margin-bottom: 8px;}
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.form-label {
+  color: #000000;
+}
+
+/* Botón Verde */
+.btn-calculate {
+  background-color: var(--byraz-green);
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-calculate:hover { transform: scale(1.05); }
+
+/* Texto de Resultados */
+.results-section h2 { text-align: center; margin-bottom: 30px; font-size: 1.8rem; }
+.results-list p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #000000;
+}
+.results-list span { font-weight: bold; }
+
+.error-text-small {
+  color: #ff0000;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: block;
+  /* Un poco de animación para que no aparezca de golpe */
+  animation: fadeIn 0.3s ease-in;
+}
+
+.input-error {
+  border: 1px solid #ff0000 !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .main-grid {
+    flex-direction: column; /* Cambia de horizontal a vertical */
+    gap: 20px;
+  }
+  
+  .results-section {
+    width: 100%;
+    padding: 20px;
+  }
+}
