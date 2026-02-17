@@ -12,6 +12,7 @@ Es una aplicación web para calcular finanzas personales.
 ## Estructura del proyecto
 El proyecto se compone de dos partes backend/frontend:
 
+```
 Byraz
 ├── backend/              # Scripts de Node.js o lógica de servidor pesada
 │   ├── config/
@@ -29,6 +30,7 @@ Byraz
 │       └── main.js
 ├── .env                  
 └── README.md
+```
 
 ## Instalaciones del proyecto
 
