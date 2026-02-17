@@ -59,7 +59,7 @@ Byraz
    ```
 
 ## Estructura de la tabla SQL
-
+```
 CREATE TABLE financial_records (
   id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
   created_at timestamptz DEFAULT now() NOT NULL,
@@ -71,3 +71,4 @@ CREATE TABLE financial_records (
   wants_budget numeric,
   savings_budget numeric
 );
+```
