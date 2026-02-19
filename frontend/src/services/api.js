@@ -6,8 +6,7 @@ const api = axios.create({
 
 export const sendFinancialData = async (data) => {
     try {
-        // Agregamos el /api antes de /calculate
-        const response = await api.post('/api/calculate', data); 
+        const response = await api.post('/calculate', data);
         return response.data;
     } catch (error) {
         throw error.response ? error.response.data : new Error("Error de red");
