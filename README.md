@@ -1,5 +1,8 @@
-# Byraz
-Es una aplicación web para calcular finanzas personales.
+# Byraz – Planificador Financiero Inteligente
+Byraz es una aplicación web diseñada para ayudar a los usuarios a tomar el control de sus finanzas personales utilizando la metodología 50/30/20. La plataforma permite calcular de forma instantánea cómo distribuir los ingresos mensuales netos entre necesidades básicas, gastos personales y ahorro, considerando variables específicas como el tipo y costo de vivienda.
+
+Rol: Fullstack Developer
+Stack: React (Vite), Node.js (Express), PostgreSQL (Supabase).
 
 ## Tecnologías usadas
 - React
@@ -8,6 +11,7 @@ Es una aplicación web para calcular finanzas personales.
 - Supabase
 - express
 - axios
+- helmet
 
 ## Estructura del proyecto
 El proyecto se compone de dos partes backend/frontend:
@@ -57,7 +61,7 @@ Byraz
    node index.js                                        # En una terminal ejecutamos en el backend
    npm run dev                                          # En otra terminal ejecutamos para el frontend
    ```
-
+   El sistema usa el **puerto 3000** para la API y el **5173** para la interfaz, la comunicación entre ambos está protegida por **CORS** y **Helmet**.
 ## Estructura de la tabla SQL
 ```
 CREATE TABLE financial_records (

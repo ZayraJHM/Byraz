@@ -1,10 +1,12 @@
 import express from 'express';
 import cors from 'cors';
+import helmet from 'helmet';
 import { createFinancialRecord } from './services/financeService.js';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
+app.use(helmet());
 app.use(cors());
 // Middleware para que Express entienda datos en formato JSON
 app.use(express.json());
