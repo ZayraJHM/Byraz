@@ -7,7 +7,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+    origin: 'https://byraz-99dkmqttd-zayrajhms-projects.vercel.app' 
+  }));
 // Middleware para que Express entienda datos en formato JSON
 app.use(express.json());
 
